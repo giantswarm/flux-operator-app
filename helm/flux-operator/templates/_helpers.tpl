@@ -16,14 +16,15 @@ Create chart name and version as used by the chart label.
 {{/*
 Common labels
 */}}
-{{- define "labels.common" -}}
-app: {{ include "name" . | quote }}
-{{ include "labels.selector" . }}
-app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+{{- define "flux-operator.labels" -}}
+application.giantswarm.io/team: {{ index .Chart.Annotations "application.giantswarm.io/team" | default "honeybadger" | quote }}
+helm.sh/chart: {{ include "flux-operator.chart" . }}
+{{ include "flux-operator.selectorLabels" . }}
+{{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
-application.giantswarm.io/team: {{ index .Chart.Annotations "application.giantswarm.io/team" | quote }}
-helm.sh/chart: {{ include "chart" . | quote }}
-{{- end -}}
+{{- end }}
+app.kubernetes.io/managed-by: {{ .Release.Service }}
+{{- end }}
 
 {{/*
 Selector labels

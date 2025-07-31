@@ -1,0 +1,10 @@
+flux-operator:
+    enabled: true
+
+    image:
+        repository: gsoci.azurecr.io/giantswarm/flux-operator
+
+    priorityClassName: "system-cluster-critical"
+
+    serviceMonitor:
+        create: true

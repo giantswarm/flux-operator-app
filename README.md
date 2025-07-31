@@ -2,66 +2,38 @@
 
 [Guide about how to manage an app on Giant Swarm](https://handbook.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
 
-# {APP-NAME} chart
+# Flux Operator Helm Chart
 
-Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
-Here, we define the {APP-NAME} chart with its templates and default configuration.
+Giant Swarm offers a Flux Operator app which can be installed in workload clusters.
+Here, we define the Flux Operator Helm Chart with its templates and default configuration.
 
 **What is this app?**
 
+The Flux Operator is a Kubernetes CRD controller that manages the lifecycle of CNCF Flux and the ControlPlane enterprise distribution.
+
 **Why did we add it?**
+
+The operator extends Flux with self-service capabilities, deployment windows and preview environments for GitLab and GitHub pull requests testing.
 
 **Who can use it?**
 
+Any user of the Giant Swarm platform.
+
 ## Installing
 
-There are several ways to install this app onto a workload cluster.
+This app is a Helm Chart, hence any method capable of handling Helm Charts is good for installation, for example:
 
-- [Using GitOps to instantiate the App](https://docs.giantswarm.io/tutorials/continuous-deployment/apps/add-appcr/)
-- By creating an [App resource](https://docs.giantswarm.io/reference/platform-api/crd/apps.application.giantswarm.io) using the platform API as explained in [Getting started with App Platform](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/).
+[App Platform](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/deploy-app/#creating-an-app-resource)
+[Flux](https://fluxcd.io/flux/components/helm/helmreleases/)
+[Helm binary](https://helm.sh/docs/helm/helm_install/)
 
-## Configuring
-
-### values.yaml
-
-**This is an example of a values file you could upload using our web interface.**
-
-```yaml
-# values.yaml
-
-```
-
-### Sample App CR and ConfigMap for the management cluster
-
-If you have access to the Kubernetes API on the management cluster, you could create the App CR and ConfigMap directly.
-
-Here is an example that would install the app to workload cluster `abc12`:
-
-```yaml
-# appCR.yaml
-
-```
-
-```yaml
-# user-values-configmap.yaml
-
-```
-
-See our [full reference on how to configure apps](https://docs.giantswarm.io/tutorials/fleet-management/app-platform/app-configuration/) for more details.
-
-## Compatibility
-
-This app has been tested to work with the following workload cluster release versions:
-
-- _add release version_
 
 ## Limitations
 
-Some apps have restrictions on how they can be deployed.
-Not following these limitations will most likely result in a broken deployment.
+Some apps have restrictions on how they can be deployed. Not following these limitations will most likely result in a broken deployment.
 
-- _add limitation_
+- only a single instance of this app is allowed in within a cluster.
 
 ## Credit
 
-- {APP HELM REPOSITORY}
+- https://github.com/controlplaneio-fluxcd/charts/tree/main/charts/flux-operator
