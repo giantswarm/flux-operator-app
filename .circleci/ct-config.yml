@@ -1,3 +1,0 @@
----
-chart-repos:
-- flux-operator=oci://ghcr.io/controlplaneio-fluxcd/charts

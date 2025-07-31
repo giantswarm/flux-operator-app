@@ -3,4 +3,3 @@ generate-metadata: true
 chart-dir: ./helm/flux-operator
 destination: ./build
 catalog-base-url: https://giantswarm.github.io/giantswarm-catalog/
-ct-config: ./.circleci/ct-config.yml
