@@ -12,11 +12,11 @@ spec:
     - containerName: manager
       controlledValues: RequestsAndLimits
       minAllowed:
-        cpu: {{ .Values.fluxOperator.resources.requests.cpu }}
-        memory: {{ .Values.fluxOperator.resources.requests.memory }}
+        cpu: {{ (index .Values "flux-operator").resources.requests.cpu }}
+        memory: {{ (index .Values "flux-operator").resources.requests.memory }}
       maxAllowed:
-        cpu: {{ .Values.fluxOperator.resources.limits.cpu }}
-        memory: {{ .Values.fluxOperator.resources.limits.memory }}
+        cpu: {{ (index .Values "flux-operator").resources.limits.cpu }}
+        memory: {{ (index .Values "flux-operator").resources.limits.memory }}
       mode: Auto
   targetRef:
     apiVersion: apps/v1

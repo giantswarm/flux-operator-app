@@ -1,10 +1,9 @@
 giantswarm:
-    fluxOperator:
-        verticalPodAutoscaler:
-            enabled: true
-            force: false
+    verticalPodAutoscaler:
+        enabled: true
+        force: true
 
-fluxOperator:
+flux-operator:
     enabled: true
 
     image:

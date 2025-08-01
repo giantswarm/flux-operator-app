@@ -44,5 +44,5 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
 {{- define "resource.vpa.enabled" -}}
-{{- if and (or (.Capabilities.APIVersions.Has "autoscaling.k8s.io/v1") (.Values.giantswarm.fluxOperator.verticalPodAutoscaler.force)) (.Values.giantswarm.fluxOperator.verticalPodAutoscaler.enabled) }}true{{ else }}false{{ end }}
+{{- if and (or (.Capabilities.APIVersions.Has "autoscaling.k8s.io/v1") (.Values.giantswarm.verticalPodAutoscaler.force)) (.Values.giantswarm.verticalPodAutoscaler.enabled) }}true{{ else }}false{{ end }}
 {{- end -}}
