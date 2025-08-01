@@ -1,7 +1,7 @@
 giantswarm:
     verticalPodAutoscaler:
         enabled: true
-        force: true
+        force: false
 
 flux-operator:
     enabled: true
