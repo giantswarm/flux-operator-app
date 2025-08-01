@@ -1,0 +1,27 @@
+{{ if eq (include "resource.vpa.enabled" .) "true" }}
+apiVersion: autoscaling.k8s.io/v1
+kind: VerticalPodAutoscaler
+metadata:
+  name: flux-operator
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "flux-operator.labels" . | nindent 4 }}
+spec:
+  resourcePolicy:
+    containerPolicies:
+    - containerName: manager
+      controlledValues: RequestsAndLimits
+      minAllowed:
+        cpu: {{ .Values.fluxOperator.resources.requests.cpu }}
+        memory: {{ .Values.fluxOperator.resources.requests.memory }}
+      maxAllowed:
+        cpu: {{ .Values.fluxOperator.resources.limits.cpu }}
+        memory: {{ .Values.fluxOperator.resources.limits.memory }}
+      mode: Auto
+  targetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name:  flux-operator
+  updatePolicy:
+    updateMode: Auto
+{{- end }}
