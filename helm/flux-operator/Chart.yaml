@@ -17,5 +17,5 @@ name: flux-operator
 restrictions:
   clusterSingleton: true
 sources:
-- https://github.com/controlplaneio-fluxcd/charts/tree/main/charts/flux-operator
+  - https://github.com/controlplaneio-fluxcd/charts/tree/main/charts/flux-operator
 version: 0.1.0
