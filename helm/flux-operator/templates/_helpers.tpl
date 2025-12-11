@@ -34,7 +34,7 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "flux-operator.labels" -}}
-application.giantswarm.io/team: {{ index .Chart.Annotations "application.giantswarm.io/team" | default "honeybadger" | quote }}
+application.giantswarm.io/team: {{ index .Chart.Annotations "io.giantswarm.application.team" | default "honeybadger" | quote }}
 helm.sh/chart: {{ include "flux-operator.chart" . }}
 {{ include "flux-operator.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
