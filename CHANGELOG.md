@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-01-23
+
 ### Changed
 
 - Migrate Chart.yaml annotations to new format as per https://docs.giantswarm.io/reference/platform-api/chart-metadata/
@@ -18,5 +20,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial configuration of an app.
 
-[Unreleased]: https://github.com/giantswarm/flux-operator-app/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/giantswarm/flux-operator-app/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/giantswarm/flux-operator-app/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/giantswarm/flux-operator-app/releases/tag/v0.1.0
