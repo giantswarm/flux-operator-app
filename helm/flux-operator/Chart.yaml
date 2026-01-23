@@ -1,4 +1,5 @@
 annotations:
+  io.giantswarm.application.audience: all
   io.giantswarm.application.restrictions.cluster-singleton: 'true'
   io.giantswarm.application.team: honeybadger
 apiVersion: v2
