@@ -3,7 +3,7 @@ annotations:
   io.giantswarm.application.restrictions.cluster-singleton: 'true'
   io.giantswarm.application.team: honeybadger
 apiVersion: v2
-appVersion: v0.26.0
+appVersion: v0.52.0
 dependencies:
   - name: flux-operator
     version: 0.52.0
