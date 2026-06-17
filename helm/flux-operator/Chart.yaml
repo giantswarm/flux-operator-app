@@ -18,4 +18,4 @@ keywords:
 name: flux-operator
 sources:
   - https://github.com/controlplaneio-fluxcd/charts/tree/main/charts/flux-operator
-version: 0.2.0
+version: 0.3.0
