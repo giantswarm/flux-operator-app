@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.4.0] - 2026-07-17
 
+### Changed
+
 - Upgrade Flux Operator to `v0.55.0` version.
 
 ## [0.3.0] - 2026-06-17
