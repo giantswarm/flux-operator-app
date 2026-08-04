@@ -1,6 +1,6 @@
 dependencies:
 - name: flux-operator
   repository: oci://ghcr.io/controlplaneio-fluxcd/charts
-  version: 0.55.0
-digest: sha256:566c7e09a639a95fa17b476377778b8afbddd02c3411ee33a932c4adc2fb1a52
-generated: "2026-07-13T20:41:32.932801581Z"
+  version: 0.57.0
+digest: sha256:e6a4addb54cb2329ce192ba4557e8ca0e0eeaf0b84300dc0b040debb6c818a6b
+generated: "2026-08-04T20:29:11.674711315Z"
