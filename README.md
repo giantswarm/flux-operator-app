@@ -1,4 +1,4 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/{APP-NAME}/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/{APP-NAME}/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/flux-operator-app/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/flux-operator-app/tree/main)
 
 [Guide about how to manage an app on Giant Swarm](https://handbook.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
 
