@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Upgrade Flux Operator to `v0.62.1` version.
 - Update architect to v10.14.9 (giantswarm/flux-operator-app#80)
 
 ### Fixed
